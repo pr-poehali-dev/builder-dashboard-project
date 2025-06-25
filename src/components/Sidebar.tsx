@@ -9,17 +9,19 @@ interface SidebarProps {
 const Sidebar = ({ activeSection, onSectionChange }: SidebarProps) => {
   const menuItems = [
     { id: "home", label: "Главная", icon: "Home" },
+    { id: "myobject", label: "Мой объект", icon: "Building" },
     { id: "documents", label: "Документы", icon: "FileText" },
-    { id: "ukep", label: "УКЭП", icon: "Shield" },
     { id: "contracts", label: "Договоры", icon: "FileCheck" },
-    { id: "chat", label: "Чат с клиентом", icon: "MessageSquare" },
+    { id: "payments", label: "Платежи", icon: "CreditCard" },
+    { id: "ukep", label: "УКЭП", icon: "Shield" },
+    { id: "chat", label: "Чат с застройщиком", icon: "MessageSquare" },
   ];
 
   return (
     <div className="w-64 bg-white border-r border-gray-200 h-screen fixed left-0 top-0">
       <div className="p-6 border-b border-gray-200">
         <h2 className="text-xl font-bold text-gray-800">Личный кабинет</h2>
-        <p className="text-sm text-gray-500 mt-1">Разработчик/Строитель</p>
+        <p className="text-sm text-gray-500 mt-1">Дольщик</p>
       </div>
 
       <nav className="mt-6">

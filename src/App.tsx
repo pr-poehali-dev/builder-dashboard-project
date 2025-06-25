@@ -1,28 +1,32 @@
-
+import { useState } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
+import ChatSection from "@/components/sections/ChatSection";
+import ContractsSection from "@/components/sections/ContractsSection";
+import DocumentsSection from "@/components/sections/DocumentsSection";
+import HomeSection from "@/components/sections/HomeSection";
+import MyObjectSection from "@/components/sections/MyObjectSection";
+import PaymentsSection from "@/components/sections/PaymentsSection";
+import UKEPSection from "@/components/sections/UKEPSection";
 
-const queryClient = new QueryClient();
+const App = () => {
+  const [activeSection, setActiveSection] = useState("home");
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
+  return (
+    <div className="min-h-screen bg-gray-50">
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+      <main>
+        {activeSection === "home" && <HomeSection />}
+        {activeSection === "myobject" && <MyObjectSection />}
+        {activeSection === "documents" && <DocumentsSection />}
+        {activeSection === "contracts" && <ContractsSection />}
+        {activeSection === "payments" && <PaymentsSection />}
+        {activeSection === "ukep" && <UKEPSection />}
+        {activeSection === "chat" && <ChatSection />}
+      </main>
+    </div>
+  );
+};
 
 export default App;

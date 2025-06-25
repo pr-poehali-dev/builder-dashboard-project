@@ -5,42 +5,40 @@ const DocumentsSection = () => {
   const [documents] = useState([
     {
       id: 1,
-      name: "Техническое задание.pdf",
-      size: "2.4 MB",
-      date: "20.06.2025",
-      status: "Активен",
+      name: "Договор долевого участия.pdf",
+      size: "3.2 MB",
+      date: "15.01.2024",
+      status: "Подписан",
     },
     {
       id: 2,
-      name: "Смета проекта.xlsx",
-      size: "1.2 MB",
-      date: "18.06.2025",
-      status: "На согласовании",
+      name: "Справка о ходе строительства.pdf",
+      size: "1.8 MB",
+      date: "20.06.2025",
+      status: "Получен",
     },
     {
       id: 3,
-      name: "Чертежи основные.dwg",
-      size: "15.7 MB",
-      date: "15.06.2025",
-      status: "Активен",
+      name: "Акт приема-передачи.pdf",
+      size: "2.1 MB",
+      date: "Ожидается",
+      status: "Не готов",
     },
     {
       id: 4,
-      name: "Разрешение на строительство.pdf",
-      size: "3.1 MB",
-      date: "10.06.2025",
-      status: "Согласован",
+      name: "Выписка из ЕГРН.pdf",
+      size: "0.8 MB",
+      date: "Ожидается",
+      status: "Не готов",
     },
   ]);
 
   return (
     <div>
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold text-gray-800">Документы</h1>
-        <button className="bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-sky-600 transition-colors flex items-center">
-          <Icon name="Upload" size={16} className="mr-2" />
-          Загрузить документ
-        </button>
+        <h1 className="text-2xl font-bold text-gray-800">
+          Документы по квартире
+        </h1>
       </div>
 
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
@@ -97,14 +95,8 @@ const DocumentsSection = () => {
                 </td>
                 <td className="py-4 px-6">
                   <div className="flex items-center space-x-2">
-                    <button className="text-sky-500 hover:text-sky-700">
-                      <Icon name="Download" size={16} />
-                    </button>
                     <button className="text-gray-500 hover:text-gray-700">
                       <Icon name="Eye" size={16} />
-                    </button>
-                    <button className="text-red-500 hover:text-red-700">
-                      <Icon name="Trash2" size={16} />
                     </button>
                   </div>
                 </td>

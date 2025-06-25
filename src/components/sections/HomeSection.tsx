@@ -3,23 +3,28 @@ import Icon from "@/components/ui/icon";
 const HomeSection = () => {
   const stats = [
     {
-      label: "Активные проекты",
-      value: "12",
+      label: "Мой объект",
+      value: "1",
       color: "bg-sky-500",
-      icon: "Briefcase",
+      icon: "Building",
     },
     {
-      label: "Документы",
-      value: "47",
+      label: "Документы по квартире",
+      value: "12",
       color: "bg-orange-500",
       icon: "FileText",
     },
-    { label: "Договоры", value: "8", color: "bg-blue-400", icon: "FileCheck" },
     {
-      label: "Непрочитанные",
-      value: "3",
-      color: "bg-red-500",
-      icon: "MessageSquare",
+      label: "Платежи",
+      value: "85%",
+      color: "bg-green-500",
+      icon: "CreditCard",
+    },
+    {
+      label: "Готовность",
+      value: "73%",
+      color: "bg-blue-400",
+      icon: "TrendingUp",
     },
   ];
 
@@ -57,10 +62,10 @@ const HomeSection = () => {
           </h3>
           <div className="space-y-3">
             <div className="flex items-center p-3 bg-gray-50 rounded-lg">
-              <Icon name="FileText" size={16} className="text-sky-500 mr-3" />
+              <Icon name="Building" size={16} className="text-sky-500 mr-3" />
               <div>
                 <p className="text-sm font-medium">
-                  Добавлен документ "Смета_2024.pdf"
+                  Обновление по ходу строительства
                 </p>
                 <p className="text-xs text-gray-500">2 часа назад</p>
               </div>
@@ -72,9 +77,7 @@ const HomeSection = () => {
                 className="text-orange-500 mr-3"
               />
               <div>
-                <p className="text-sm font-medium">
-                  Новое сообщение от клиента
-                </p>
+                <p className="text-sm font-medium">Сообщение от застройщика</p>
                 <p className="text-xs text-gray-500">4 часа назад</p>
               </div>
             </div>
@@ -88,15 +91,15 @@ const HomeSection = () => {
           <div className="space-y-3">
             <div className="flex items-center justify-between p-3 bg-orange-50 rounded-lg">
               <div>
-                <p className="text-sm font-medium">Согласование проекта</p>
-                <p className="text-xs text-gray-500">До 25.06.2025</p>
+                <p className="text-sm font-medium">Очередной платеж</p>
+                <p className="text-xs text-gray-500">До 30.06.2025</p>
               </div>
               <Icon name="Clock" size={16} className="text-orange-500" />
             </div>
             <div className="flex items-center justify-between p-3 bg-sky-50 rounded-lg">
               <div>
-                <p className="text-sm font-medium">Подписание договора</p>
-                <p className="text-xs text-gray-500">До 27.06.2025</p>
+                <p className="text-sm font-medium">Осмотр квартиры</p>
+                <p className="text-xs text-gray-500">До 15.07.2025</p>
               </div>
               <Icon name="Clock" size={16} className="text-sky-500" />
             </div>

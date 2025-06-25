@@ -5,26 +5,26 @@ const ChatSection = () => {
   const [messages] = useState([
     {
       id: 1,
-      sender: "client",
-      text: "Добрый день! Хотел уточнить по срокам проекта",
+      sender: "developer",
+      text: "Добрый день! Информируем о ходе строительства вашего объекта",
       time: "14:30",
     },
     {
       id: 2,
       sender: "me",
-      text: "Здравствуйте! Согласно договору, завершение планируется на 15 июля",
+      text: "Здравствуйте! Когда планируется завершение строительства?",
       time: "14:32",
     },
     {
       id: 3,
-      sender: "client",
-      text: "Отлично. А можно ли ускорить на неделю?",
+      sender: "developer",
+      text: "Согласно графику, сдача объекта запланирована на IV квартал 2025 года",
       time: "14:35",
     },
     {
       id: 4,
       sender: "me",
-      text: "Рассмотрим возможности. Уточню у бригады и отвечу завтра",
+      text: "Спасибо за информацию! Можно ли получить фото текущего состояния?",
       time: "14:40",
     },
   ]);
@@ -33,7 +33,9 @@ const ChatSection = () => {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-gray-800 mb-6">Чат с клиентом</h1>
+      <h1 className="text-2xl font-bold text-gray-800 mb-6">
+        Чат с застройщиком
+      </h1>
 
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 h-96 flex flex-col">
         <div className="border-b border-gray-200 p-4">
@@ -42,7 +44,9 @@ const ChatSection = () => {
               <Icon name="User" size={20} className="text-sky-600" />
             </div>
             <div>
-              <h3 className="font-semibold text-gray-800">ООО "СтройИнвест"</h3>
+              <h3 className="font-semibold text-gray-800">
+                ООО "СтройДевелопмент"
+              </h3>
               <p className="text-sm text-green-500 flex items-center">
                 <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
                 Онлайн

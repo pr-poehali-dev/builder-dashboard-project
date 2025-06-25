@@ -4,7 +4,7 @@ const UKEPSection = () => {
   return (
     <div>
       <h1 className="text-2xl font-bold text-gray-800 mb-6">
-        УКЭП (Усиленная квалифицированная электронная подпись)
+        УКЭП для покупки недвижимости
       </h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -31,7 +31,7 @@ const UKEPSection = () => {
               <p className="text-sm text-gray-600 mb-2">
                 Владелец сертификата:
               </p>
-              <p className="font-medium">Иванов Иван Иванович</p>
+              <p className="font-medium">Петров Петр Петрович</p>
               <p className="text-sm text-gray-500">ИНН: 123456789012</p>
             </div>
           </div>
@@ -52,16 +52,16 @@ const UKEPSection = () => {
           <div className="space-y-3">
             <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
               <div>
-                <p className="text-sm font-medium">Договор подряда №001</p>
-                <p className="text-xs text-gray-500">Подписан 20.06.2025</p>
+                <p className="text-sm font-medium">Договор долевого участия</p>
+                <p className="text-xs text-gray-500">Подписан 15.01.2024</p>
               </div>
               <Icon name="CheckCircle" size={16} className="text-green-500" />
             </div>
 
             <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
               <div>
-                <p className="text-sm font-medium">Техническое задание</p>
-                <p className="text-xs text-gray-500">Подписан 18.06.2025</p>
+                <p className="text-sm font-medium">Дополнительное соглашение</p>
+                <p className="text-xs text-gray-500">Подписан 10.03.2024</p>
               </div>
               <Icon name="CheckCircle" size={16} className="text-green-500" />
             </div>
